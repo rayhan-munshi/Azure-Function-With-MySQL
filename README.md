@@ -1,2 +1,2 @@
-# Azure-Function-With-MySQL
+# Azure Function With MySQL As Web API
 This is a simple http triggered Azure function where I showed how to connect to a mysql database. To use this you first need a mysql database created and you will need the connection string. Then you can use that connection string in the "local.settings.json" file's "MySQLConnectionStr" attribute value. If you want to publish this into Azure then you need to create an environment variable with the same name ("MySQLConnectionStr") in Azure portal and it will work there (if the database is accessible from azure).
