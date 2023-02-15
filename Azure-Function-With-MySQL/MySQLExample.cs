@@ -29,16 +29,6 @@ namespace Azure_Function_With_MySQL
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
-            //var connStringBuilder = new MySqlConnectionStringBuilder
-            //{
-            //    Server = "tonmoydb.mysql.database.azure.com",
-            //    Database = "mytestdb",
-            //    UserID = "tonmoyadmin",
-            //    Password = "ixora@123",
-            //    SslMode = MySqlSslMode.Required,
-            //    SslCa= "DigiCertGlobalRootCA.crt.pem"
-            //};
-
             await connection.OpenAsync();
             using var cmd = connection.CreateCommand();
             cmd.CommandText = @"CREATE TABLE IF NOT EXISTS Persons (
